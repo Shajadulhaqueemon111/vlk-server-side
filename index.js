@@ -8,7 +8,8 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.USER_PASS}@cluster0.7auoehb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+// const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.USER_PASS}@cluster0.7auoehb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = "mongodb://localhost:27017";
 console.log(uri);
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
